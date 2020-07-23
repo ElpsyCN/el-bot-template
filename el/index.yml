@@ -1,0 +1,92 @@
+plugins:
+  default:
+    # - rss
+    - answer
+    - cli
+    # - limit
+    # - forward
+    # - dev
+    # - teach
+  community:
+    # - hitokoto
+    # - niubi
+
+config_files:
+  - "./config/plugins.yml"
+
+forward:
+  - listen:
+      group:
+        # 机器人测试群
+        - 120117362
+    target:
+      friend:
+        - 910426929
+      group:
+        # Elpsy Congroo
+        - 1072803190
+
+rss:
+  - name: 云游君的小站
+    url: https://www.yunyoujun.cn/atom.xml
+    # cron: "*/1 * * * *"
+    customFields:
+      item:
+        - updated
+        - summary
+    content:
+      - 标题：${item.title}
+      - 链接：${item.link}
+      - 时间：${item.updated}
+    target:
+      # friend:
+      # - 910426929
+      group:
+        # - 1072803190
+        # 机器人测试群
+        - 120117362
+  - name: 云游君的小推特
+    url: https://rsshub.ioiox.com/twitter/user/YunYouJun/exclude_replies
+    customFields:
+      item:
+        - description
+    content:
+      - ----------
+      - 时间：${item.pubDate}
+      - 链接：${item.link}
+      - ""
+      - ${item.description}
+    target:
+      group:
+        - 120117362
+        # - 389401003
+        # - 707408530
+
+# 消息应答
+answer:
+  # - re: 早呀|早上|哦哈呦|起床啦
+  #   reply:
+  #     - type: Plain
+  #       text: 新的一天也要加油鸭
+  - re: 晚安|哦呀斯密
+    api: https://el-bot-api.vercel.app/api/wanan
+    reply: ${data[0]}
+  - at: true
+    includes: 在吗
+    reply: 我在
+  - unlisten:
+      friend:
+        - 910426929
+    includes: 喂喂喂
+    reply: 呸呸呸
+  - listen:
+      friend:
+        - 910426929
+    includes: 喂喂喂
+    reply: 嘿嘿嘿
+  - includes:
+      - bing
+      - 壁纸
+    reply:
+      - type: Image
+        url: https://images.weserv.nl/?url=https://bing.ioliu.cn/v1/rand
