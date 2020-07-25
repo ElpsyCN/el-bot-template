@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "el-bot 的快速启动模版",
   "private": true,
-  "main": "index.js",
+  "main": "bot/index.js",
   "scripts": {
+    "bot": "npm run start:bot",
     "start": "npm-run-all --parallel start:*",
-    "start:bot": "nodemon index.js",
+    "start:bot": "nodemon bot/index.js",
     "start:mirai": "node scripts/start-mirai-ok.js",
     "install:mirai": "node scripts/install-mirai-ok.js",
     "webhook": "node scripts/webhook.js"
@@ -26,7 +27,7 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "^0.3.0"
+    "el-bot": "^0.3.3"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

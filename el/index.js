@@ -1,5 +1,6 @@
-require("dotenv").config();
-const config = require("el-bot/dist/utils/config");
+require("dotenv").config()
+const { resolve } = require("path")
+const config = require("el-bot/dist/utils/config")
 
 module.exports = {
   qq: parseInt(process.env.BOT_QQ),
@@ -7,7 +8,7 @@ module.exports = {
     enableWebsocket: true,
   },
   config: {
-    plugins: config.parse("./el/index.yml"),
+    plugins: config.parse(resolve(__dirname, "./index.yml")),
   },
   // webhook
   webhook: {
@@ -15,4 +16,4 @@ module.exports = {
     port: 7777,
     secret: "el-psy-congroo",
   },
-};
+}
