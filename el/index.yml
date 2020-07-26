@@ -1,27 +1,15 @@
 plugins:
   default:
-    # - rss
+    - rss
     - answer
     - cli
-    # - limit
-    # - forward
+    - limit
+    - forward
     # - dev
-    # - teach
+    - teach
   community:
     # - hitokoto
     # - niubi
-
-forward:
-  - listen:
-      group:
-        # 机器人测试群
-        - 120117362
-    target:
-      friend:
-        - 910426929
-      group:
-        # Elpsy Congroo
-        - 1072803190
 
 rss:
   - name: 云游君的小站

@@ -1,15 +1,15 @@
 require("dotenv").config()
 const { resolve } = require("path")
-const config = require("el-bot/dist/utils/config")
+const { utils } = require("el-bot")
+
+console.log(utils.config.parse(resolve(__dirname, "./index.yml")))
 
 module.exports = {
   qq: parseInt(process.env.BOT_QQ),
   setting: {
     enableWebsocket: true,
   },
-  config: {
-    plugins: config.parse(resolve(__dirname, "./index.yml")),
-  },
+  config: utils.config.parse(resolve(__dirname, "./index.yml")),
   // webhook
   webhook: {
     path: "/webhook",
