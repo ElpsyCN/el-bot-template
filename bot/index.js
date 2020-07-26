@@ -1,4 +1,4 @@
-const Bot = require("el-bot").default
+const Bot = require("el-bot")
 const el = require("../el")
 
 const bot = new Bot(el)

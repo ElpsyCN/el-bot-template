@@ -9,7 +9,7 @@ const handler = createHandler({
 });
 
 const shell = require("shelljs");
-const log = require("mirai-ts/dist/utils/log").default;
+const { log } = require("mirai-ts")
 
 // 启动监听
 http
