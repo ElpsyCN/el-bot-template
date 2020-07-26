@@ -2,13 +2,13 @@ require("dotenv").config()
 const { resolve } = require("path")
 const { utils } = require("el-bot")
 
-console.log(utils.config.parse(resolve(__dirname, "./index.yml")))
-
 module.exports = {
   qq: parseInt(process.env.BOT_QQ),
-  setting: {
-    enableWebsocket: true,
-  },
+  // 你可以直接解析 mirai-api-http 的配置
+  setting: utils.config.parse(resolve(__dirname, '../mirai/plugins/MiraiAPIHTTP/setting.yml')),
+  // setting: {
+  //   enableWebsocket: false
+  // },
   config: utils.config.parse(resolve(__dirname, "./index.yml")),
   // webhook
   webhook: {
