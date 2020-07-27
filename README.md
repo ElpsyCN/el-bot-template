@@ -32,6 +32,9 @@ cd your-el-bot
 
 ### 安装依赖
 
+> 请检查 el-bot 是否为最新版本 ![npm](https://img.shields.io/npm/v/el-bot)，模版的依赖更新可能要略微落后。
+> 安装最新版本 el-bot：`npm install el-bot@latest`
+
 ```sh
 npm install
 ```
