@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "0.3.11"
+    "el-bot": "0.3.12"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
