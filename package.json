@@ -8,8 +8,9 @@
     "folder": "mirai"
   },
   "scripts": {
-    "bot": "el start bot",
-    "start": "npm-run-all --parallel start:*",
+    "bot": "nodemon --exec el bot",
+    "dev": "nodemon --exec el bot",
+    "start": "el start",
     "start:bot": "el start bot",
     "start:mirai": "el start mirai",
     "install:mirai": "el install mirai",
@@ -30,11 +31,10 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "0.3.10"
+    "el-bot": "0.3.11"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4",
-    "npm-run-all": "^4.1.5"
+    "nodemon": "^2.0.4"
   }
 }

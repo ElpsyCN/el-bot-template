@@ -109,6 +109,11 @@ BOT_QQ=123456
 ```sh
 npm run start:bot
 # yarn run start:bot
+```
+
+```sh
+# 本质与 npm run start:bot 相同，不过配置了 nodemon 启动，所以当修改文件时可以自动重启。
+npm run bot
 # yarn bot
 ```
 

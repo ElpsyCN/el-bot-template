@@ -4,12 +4,10 @@ const el = require("../el")
 const bot = new Bot(el)
 bot.start()
 
-async function app() {
-  bot.mirai.on("message", (msg) => {
-    console.log(msg)
-    // 复读
-    msg.reply(msg.messageChain)
-  })
-}
+// async function app() {
+//   bot.mirai.on("message", (msg) => {
+//     console.log(msg)
+//   })
+// }
 
-app()
+// app()
