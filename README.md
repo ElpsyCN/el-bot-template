@@ -44,7 +44,7 @@ npm install
 安装 mirai 依赖，会显示交互命令行，选择对应版本下载即可。
 
 ```sh
-npm install:mirai
+npm run install:mirai
 ```
 
 > 你也可以手动下载 [mirai-console-wrapper](https://github.com/mamoe/mirai-console-wrapper/releases) 和 [mirai-api-http](https://github.com/mamoe/mirai-api-http/releases)。
@@ -125,6 +125,8 @@ npm run bot
 > 第一次最好别这么干，因为你还要在 mirai 控制台里验证登录什么的。
 
 执行该脚本等价于同时启动下文描述的 mirai 和 el-bot。（此时两者的输出信息将显示在同一个终端中。）
+
+el-bot 将在 mirai 启动三秒后再启动，以确保 QQ 已登录。（如果 mirai 启动较慢，还是建议先分开启动。）
 
 ```sh
 npm run start
