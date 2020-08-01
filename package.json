@@ -14,6 +14,7 @@
     "start:bot": "el start bot",
     "start:mirai": "el start mirai",
     "install:mirai": "el install mirai",
+    "lint": "eslint --fix . && prettier --write .",
     "webhook": "el start webhook"
   },
   "repository": {
@@ -35,6 +36,9 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
   }
 }
