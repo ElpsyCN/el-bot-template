@@ -1,6 +1,8 @@
 # el-bot-template
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ElpsyCN/el-bot-template)
+[![QQ Group](https://img.shields.io/badge/qq%20group-707408530-12B7F5)](https://shang.qq.com/wpa/qunwpa?idkey=5b0eef3e3256ce23981f3b0aa2457175c66ca9194efd266fd0e9a7dbe43ed653)
+[![telegram](https://img.shields.io/badge/telegram-elpsy__cn-blue)](https://t.me/elpsy_cn)
 
 本仓库为包含 [mirai](https://github.com/mamoe/mirai) 与 [el-bot](https://github.com/ElpsyCN/el-bot) 的基础可运行模版。
 并在 package.json 中预置了几个简单的脚本。
@@ -32,7 +34,7 @@ cd your-el-bot
 
 ### 安装依赖
 
-> 请检查 el-bot 是否为最新版本 ![npm](https://img.shields.io/npm/v/el-bot)，模版的依赖更新可能要略微落后。
+> 请检查 el-bot 是否为最新版本 ![npm](https://img.shields.io/npm/v/el-bot)，模版的依赖更新可能要略微落后。  
 > 安装最新版本 el-bot：`npm install el-bot@latest`
 
 ```sh
@@ -41,30 +43,27 @@ npm install
 
 ### 安装 mirai
 
-安装 mirai 依赖，会显示交互命令行，选择对应版本下载即可。
+由于种种原因，本项目将不再提供安装 mirai 的脚本与方法，你应当具有自行安装 mirai 的能力。
 
-```sh
-npm run install:mirai
+`el-bot-template/mirai` 下的目录结构（你可以参照目录结构放置你从[某处](https://t.me/elpsy_cn)得到的 jar 文件）：
+
+```txt
+.
+├── bot.yml
+├── content
+│   ├── mirai-console-0.5.2.jar
+│   └── mirai-core-qqandroid-1.1.3.jar
+├── device.json
+├── libraries
+├── mirai-console-wrapper-1.3.0.jar
+└── plugins
+    ├── MiraiAPIHTTP
+    └── mirai-api-http-v1.7.4.jar
 ```
-
-> 你也可以手动下载 [mirai-console-wrapper](https://github.com/mamoe/mirai-console-wrapper/releases) 和 [mirai-api-http](https://github.com/mamoe/mirai-api-http/releases)。
-> 因为国内行情，mirai-api-http 可能下载较慢，你也可以进群 707408530，从群文件中获取。
-
-进入 `mirai` 目录，并放置如下：
-
-- `el-bot-template/mirai/mirai-console-wrapper-*.jar`
-- `el-bot-template/mirai/plugins/mirai-api-http-*.jar`
 
 ### 启动 mirai
 
-> Windows 用户不用执行下述脚本，直接在文件夹中双击打开 miraiOK 开头的 exe 文件即可。
-
-```sh
-npm run start:mirai
-```
-
-> 此时 `miraiOK` 会自动下载 `mirai-console-wrapper`、 `mirai-console` 和 `mirai-core-qqandroid` 的 jar 包，并放到对应位置。
-> 如果下载失败。你可以进群 `707408530` 从群文件中获取，并手动放置到 content 文件夹下。
+由于种种原因，本项目将不再提供安装 mirai 的脚本与方法，你应当具有自行启动 mirai 的能力。
 
 ### 配置
 

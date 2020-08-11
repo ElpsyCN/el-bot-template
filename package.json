@@ -10,6 +10,7 @@
   "scripts": {
     "bot": "nodemon --exec el bot",
     "dev": "nodemon --exec el bot",
+    "mirai": "java -jar mirai/mirai-console-wrapper-1.3.0.jar --update KEEP",
     "start": "el start",
     "start:bot": "el start bot",
     "start:mirai": "el start mirai",
@@ -32,7 +33,7 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "0.3.12"
+    "el-bot": "0.3.17"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
