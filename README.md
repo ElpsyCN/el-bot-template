@@ -5,7 +5,7 @@
 [![telegram](https://img.shields.io/badge/telegram-elpsy__cn-blue)](https://t.me/elpsy_cn)
 
 本仓库为包含 [mirai](https://github.com/mamoe/mirai) 与 [el-bot](https://github.com/ElpsyCN/el-bot) 的基础可运行模版。
-并在 package.json 中预置了几个简单的脚本。
+并在 `package.json` 中预置了几个简单的脚本。
 
 你需要确保你已拥有 [Java](https://www.java.com/zh_CN/) 与 [Node.js](https://nodejs.org/zh-cn/download/) 环境。
 
@@ -20,7 +20,6 @@
 ├── mirai  // mirai 本体，你也可以删除它，使用在其他地方启动的 mirai
 ├── nodemon.json  // 监听文件变动，自动重启（譬如修改配置时，非常方便）
 ├── package.json
-└── scripts
 ```
 
 ## 使用

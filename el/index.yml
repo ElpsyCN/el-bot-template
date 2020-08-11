@@ -7,7 +7,7 @@ plugins:
     - forward
     # - dev
     - teach
-  community:
+  official:
     # - hitokoto
     # - niubi
   custom:
