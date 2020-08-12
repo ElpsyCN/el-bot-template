@@ -64,6 +64,10 @@ npm install
 
 由于种种原因，本项目将不再提供安装 mirai 的脚本与方法，你应当具有自行启动 mirai 的能力。
 
+```sh
+npm run start:mirai
+```
+
 ### 配置
 
 #### 配置 mirai
@@ -72,35 +76,28 @@ npm install
 
 复制 `plugins/MiraiAPIHTTP/setting.example.yml` 文件为 `plugins/MiraiAPIHTTP/setting.yml`。
 
-记得修改你的 `authKey`，这很重要，否则你的机器人将很可能被 [NTR](https://zh.moegirl.org/zh-hans/NTR)。
+最好自行修改你的 `authKey`，否则你的机器人将很可能被 [NTR](https://zh.moegirl.org/zh-hans/NTR)。
 
 ```yaml
+# 默认为 el-psy-congroo
 authKey: el-psy-congroo
-```
-
-#### 配置自动登录
-
-miraiOK 提供了自动登录功能，在你启动过 miraiOK 后，你的 mirai 文件夹中会出现 `config.txt` 这个文件，在文件末尾添加：
-
-> 每次启动后自动登录
-
-```sh
-login QQ号 QQ密码
 ```
 
 #### 配置 bot
 
 复制 `.env.example` 文件为 `.env`。
 
-填写你的 QQ。（用来告诉 el-bot 你是要登录哪个 QQ）
+- `BOT_QQ`（必须）: 机器人 QQ 号，用来告诉 el-bot 你是要登录哪个 QQ。
+- `BOT_PASSWORD`（可选）: 机器人 QQ 密码。填写后，通过 `yarn start:mirai` 可实现自动登录。
 
 ```bash
 BOT_QQ=123456
+BOT_PASSWORD=xxxxxx
 ```
 
 ### 启动 bot
 
-> 记得新建一个终端，并确保你的 mirai 控制台保持打开。
+> 记得新建一个终端，并确保你的 mirai 控制台保持打开与 QQ 已经登录。
 > 检测控制台是否可以正常使用的一个方式是访问 <localhost:4859/about> 查看是否有信息返回。（如果你修改了端口号，记得替换。）
 
 ```sh
@@ -124,7 +121,9 @@ npm run bot
 
 执行该脚本等价于同时启动下文描述的 mirai 和 el-bot。（此时两者的输出信息将显示在同一个终端中。）
 
-el-bot 将在 mirai 启动三秒后再启动，以确保 QQ 已登录。（如果 mirai 启动较慢，还是建议先分开启动。）
+> 确保你的 QQ 已在 mirai 控制台中登录。
+
+el-bot 将在 mirai 启动三秒后再启动，并与已登录的 QQ 建立连接。（如连接失败，则每隔三秒，自动重新连接。）
 
 ```sh
 npm run start
