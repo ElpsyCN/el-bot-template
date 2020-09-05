@@ -13,13 +13,19 @@
 
 ```txt
 .
-├── LICENSE
+├── LICENSE  // AGPL-3.0，你应该用它进行商业或非法行为
 ├── README.md
 ├── bot  // 机器人实体，你可以自由编写代码扩展它
+│   ├── README.md
+│   └── index.js // 主文件
 ├── el  // 配置目录，存放机器人相关的配置（可自行解析 yml 文件）
+│   ├── README.md
+│   ├── index.js  // 所有配置文件（解析 yaml 的逻辑）
+│   └── index.yml // 插件配置文件
 ├── mirai  // mirai 本体，你也可以删除它，使用在其他地方启动的 mirai
 ├── nodemon.json  // 监听文件变动，自动重启（譬如修改配置时，非常方便）
 ├── package.json
+│   ...
 ```
 
 ## 使用
