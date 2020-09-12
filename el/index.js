@@ -11,6 +11,12 @@ module.exports = {
   // setting: {
   //   enableWebsocket: false
   // },
+  db: {
+    // 默认关闭
+    enable: false,
+    uri: process.env.BOT_DB_URI,
+    analytics: true,
+  },
   config: utils.config.parse(resolve(__dirname, "./index.yml")),
   // webhook
   webhook: {
