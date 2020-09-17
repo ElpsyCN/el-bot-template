@@ -1,15 +1,14 @@
 plugins:
-  default:
-    - rss
-    - answer
-    - cli
-    - limit
-    - forward
-    # - dev
-    - teach
+  # default:
+  #   - rss
+  #   - answer
+  #   - limit
+  #   - forward
+  #   # - dev
+  #   - teach
   official:
-    # - hitokoto
-    # - niubi
+  # - hitokoto
+  # - niubi
   custom:
     - ./bot/test
 
