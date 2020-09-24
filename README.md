@@ -30,6 +30,10 @@
 
 ## 使用
 
+当前模版为 mirai-console@0.5.2, mirai-api-http@1.7.4。
+
+> 更高版本的 mirai-console@1.0 （miria-api-http@1.8.0 以上）尚不稳定，你可以自行尝试配置。
+
 ### 克隆本模版
 
 ```sh

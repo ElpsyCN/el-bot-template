@@ -6,9 +6,9 @@ plugins:
   #   - forward
   #   # - dev
   #   - teach
-  official:
-  # - hitokoto
-  # - niubi
+  # official:
+  #   - hitokoto
+  #   - niubi
   custom:
     - ./bot/test
 
@@ -26,8 +26,8 @@ rss:
       - 时间：${item.updated}
     target:
       group:
-        # 机器人测试群
-        - 120117362
+        # El Psy Congroo
+        - 707408530
 
 # 消息应答
 answer:
