@@ -20,6 +20,7 @@ module.exports = {
   config: utils.config.parse(resolve(__dirname, "./index.yml")),
   // webhook
   webhook: {
+    enable: true,
     path: "/webhook",
     port: 7777,
     secret: "el-psy-congroo",

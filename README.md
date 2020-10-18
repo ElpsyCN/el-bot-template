@@ -3,6 +3,7 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ElpsyCN/el-bot-template)
 [![QQ Group](https://img.shields.io/badge/qq%20group-707408530-12B7F5)](https://shang.qq.com/wpa/qunwpa?idkey=5b0eef3e3256ce23981f3b0aa2457175c66ca9194efd266fd0e9a7dbe43ed653)
 [![telegram](https://img.shields.io/badge/telegram-elpsy__cn-blue)](https://t.me/elpsy_cn)
+[![docs](https://github.com/ElpsyCN/el-bot-docs/workflows/docs/badge.svg)](https://docs.bot.elpsy.cn)
 
 本仓库为包含 [mirai](https://github.com/mamoe/mirai) 与 [el-bot](https://github.com/ElpsyCN/el-bot) 的基础可运行模版。
 并在 `package.json` 中预置了几个简单的脚本。
@@ -142,7 +143,16 @@ npm run start
 
 ### Webhook
 
-```sh
-npm run webhook
-# yarn webhook
+- `enable`: 是否启用
+
+```js
+// el/index.js
+module.exports = {
+  webhook: {
+    enable: true,
+    path: "/webhook",
+    port: 7777,
+    secret: "el-psy-congroo",
+  },
+};
 ```
