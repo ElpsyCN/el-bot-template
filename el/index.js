@@ -9,7 +9,7 @@ module.exports = {
     resolve(__dirname, "../mirai/plugins/MiraiAPIHTTP/setting.yml")
   ),
   // setting: {
-  //   enableWebsocket: false
+  //   enableWebsocket: false, // 须与 mirai-api-http 的配置保持一致，若 mirai 已设置为 true，则此处也应为 true
   // },
   db: {
     // 默认关闭
