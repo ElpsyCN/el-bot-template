@@ -10,6 +10,10 @@ config.txt
 log/
 .DEBUG
 
+# mcl
+mcl
+!mcl/config/MiraiApiHttp/setting.example.yml
+
 # mirai
 *.jar
 content/

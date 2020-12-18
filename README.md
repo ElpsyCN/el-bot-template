@@ -23,7 +23,7 @@
 │   ├── README.md
 │   ├── index.js  // 所有配置文件（解析 yaml 的逻辑）
 │   └── index.yml // 插件配置文件
-├── mirai  // mirai 本体，你也可以删除它，使用在其他地方启动的 mirai
+├── mcl // mirai-console-loader 文件夹
 ├── nodemon.json  // 监听文件变动，自动重启（譬如修改配置时，非常方便）
 ├── package.json
 │   ...
@@ -31,9 +31,9 @@
 
 ## 使用
 
-当前模版为 mirai-console@0.5.2, mirai-api-http@1.7.4。
-
-> 更高版本的 mirai-console@1.0 （miria-api-http@1.8.0 以上）尚不稳定，你可以自行尝试配置。
+![mirai release](https://img.shields.io/github/v/release/mamoe/mirai?label=mirai)
+![mirai-console-loader release](https://img.shields.io/github/v/release/iTXTech/mirai-console-loader?label=mirai-console-loader)
+![mirai-api-http release](https://img.shields.io/github/v/release/project-mirai/mirai-api-http?label=mirai-api-http)
 
 ### 克隆本模版
 
@@ -53,58 +53,59 @@ npm install
 
 ### 安装 mirai
 
-由于种种原因，本项目将不再提供安装 mirai 的脚本与方法，你应当具有自行安装 mirai 的能力。
+由于种种原因，本项目将不再提供安装 mirai 的脚本与方法，你应当具有自行安装与启动 mirai 的能力。
 
-`el-bot-template/mirai` 下的目录结构（你可以参照目录结构放置你从[某处](https://t.me/elpsy_cn)得到的 jar 文件）：
+推荐使用官方启动器 [mirai-console-loader](https://github.com/iTXTech/mirai-console-loader) 自行启动 [mirai](https://github.com/mamoe/mirai)（v1.0 以上） 与 [mirai-api-http](https://github.com/mamoe/mirai-api-http) 插件（v1.9.0 以上）。
 
-```txt
-.
-├── bot.yml
-├── content
-│   ├── mirai-console-0.5.2.jar
-│   └── mirai-core-qqandroid-1.1.3.jar
-├── device.json
-├── libraries
-├── mirai-console-wrapper-1.3.0.jar
-└── plugins
-    ├── MiraiAPIHTTP
-    └── mirai-api-http-v1.7.4.jar
+下载 [MCL Releases](https://github.com/iTXTech/mirai-console-loader/releases)，并解压。
+
+Example:
+
+```sh
+wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.3/mcl-1.0.3.zip
+unzip -o -d mcl mcl-1.0.3.zip
 ```
 
 ### 启动 mirai
 
-由于种种原因，本项目将不再提供安装 mirai 的脚本与方法，你应当具有自行启动 mirai 的能力。
-
 ```sh
-npm run start:mirai
+cd mcl
+./mcl
+# 添加自动登录
+/autoLogin add 712727946 yourpassword
 ```
 
 ### 配置
 
-#### 配置 mirai
+#### 配置 mirai-api-http 插件
 
-进入 `mirai` 目录。
+下载 [mirai-api-http Releases](https://github.com/project-mirai/mirai-api-http/releases) jar 包，放置于 `mcl/plugins` 文件夹。
 
-复制 `plugins/MiraiAPIHTTP/setting.example.yml` 文件为 `plugins/MiraiAPIHTTP/setting.yml`。
+配置文件位于 `mcl/config/MiraiApiHttp/setting.yml`
 
 最好自行修改你的 `authKey`，否则你的机器人将很可能被 [NTR](https://zh.moegirl.org/zh-hans/NTR)。
 
 ```yaml
-# 默认为 el-psy-congroo
+cors:
+  - "*"
+host: 0.0.0.0
+port: 4859
 authKey: el-psy-congroo
 ```
 
 #### 配置 bot
 
-复制 `.env.example` 文件为 `.env`。
-
-- `BOT_QQ`（必须）: 机器人 QQ 号，用来告诉 el-bot 你是要登录哪个 QQ。
-- `BOT_PASSWORD`（可选）: 机器人 QQ 密码。填写后，通过 `yarn start:mirai` 可实现自动登录。
-
-```bash
-BOT_QQ=123456
-BOT_PASSWORD=xxxxxx
+```js
+// el/index.js
+module.exports = {
+  // 你登录的 QQ 号
+  qq: 12345679,
+};
 ```
+
+如果您需要上传本地图片语音文件，您需要配置您的 `package.json` 文件中 `mcl.folder` 字段为你的 mirai 文件夹相对本项目的路径。
+
+> 默认值为项目本身目录下的 `mcl` 文件夹，建议直接将 mcl 启动器置于 `mcl` 文件夹下。
 
 ### 启动 bot
 
@@ -126,20 +127,11 @@ npm run bot
 
 然后？然后参照 [el-bot 文档](https://docs.bot.elpsy.cn/) 自定义吧。
 
-### 同时启动 mirai 和 bot
-
-> 第一次最好别这么干，因为你还要在 mirai 控制台里验证登录什么的。
-
-执行该脚本等价于同时启动下文描述的 mirai 和 el-bot。（此时两者的输出信息将显示在同一个终端中。）
+### 说明
 
 > 确保你的 QQ 已在 mirai 控制台中登录。
 
-el-bot 将在 mirai 启动三秒后再启动，并与已登录的 QQ 建立连接。（如连接失败，则每隔三秒，自动重新连接。）
-
-```sh
-npm run start
-# yarn start
-```
+el-bot 将与已启动的 mirai 已登录的 QQ 建立连接。（如连接失败，则每隔三秒，自动重新连接。）
 
 ### Webhook
 
