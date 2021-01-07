@@ -68,6 +68,10 @@ unzip -o -d mcl mcl-1.0.3.zip
 
 ### 启动 mirai
 
+通过 [mirai-console-loader](https://github.com/iTXTech/mirai-console-loader) 启动 mirai。（您也可以使用其他任意方式，并记得加载 mirai-api-http 插件。）
+
+> 如果 mcl 无法正常启动，您可以比对 `mcl/config.json` 版本是否正确。
+
 ```sh
 cd mcl
 ./mcl
