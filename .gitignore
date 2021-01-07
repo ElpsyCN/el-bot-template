@@ -3,6 +3,19 @@ tmp
 nohup.out
 .vscode
 
+# mcl
+mcl/*
+!mcl/config.json
+!mcl/config/MiraiApiHttp/setting.example.yml
+
+# mirai
+mirai/*
+*.jar
+content/
+device.json
+libraries/
+bot.yml
+
 # MiraiOK
 miraiOK_*
 config.txt
@@ -10,17 +23,7 @@ config.txt
 log/
 .DEBUG
 
-# mcl
-mcl
-!mcl/config/MiraiApiHttp/setting.example.yml
-
-# mirai
-*.jar
-content/
-device.json
-libraries/
-bot.yml
-
+# basic
 .DS_Store
 yarn.lock
 package-lock.json

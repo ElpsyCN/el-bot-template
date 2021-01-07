@@ -91,6 +91,7 @@ cors:
 host: 0.0.0.0
 port: 4859
 authKey: el-psy-congroo
+enableWebsocket: true
 ```
 
 #### 配置 bot
