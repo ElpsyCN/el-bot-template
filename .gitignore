@@ -5,8 +5,6 @@ nohup.out
 
 # mcl
 mcl/*
-!mcl/config.json
-!mcl/config/MiraiApiHttp/setting.example.yml
 
 # mirai
 mirai/*

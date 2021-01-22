@@ -31,9 +31,10 @@
 
 ## 使用
 
-![mirai release](https://img.shields.io/github/v/release/mamoe/mirai?label=mirai)
-![mirai-console-loader release](https://img.shields.io/github/v/release/iTXTech/mirai-console-loader?label=mirai-console-loader)
-![mirai-api-http release](https://img.shields.io/github/v/release/project-mirai/mirai-api-http?label=mirai-api-http)
+[![mirai release](https://img.shields.io/github/v/release/mamoe/mirai?label=mirai)](https://github.com/mamoe/mirai)
+[![mirai-console-loader release](https://img.shields.io/github/v/release/iTXTech/mirai-console-loader?label=mirai-console-loader)](https://github.com/iTXTech/mirai-console-loader)
+[![mirai-api-http release](https://img.shields.io/github/v/release/project-mirai/mirai-api-http?label=mirai-api-http)](https://github.com/project-mirai/mirai-api-http)
+[![mirai-ts](https://img.shields.io/npm/v/mirai-ts?label=mirai-ts)](https://www.npmjs.com/package/mirai-ts)
 
 ### 克隆本模版
 
@@ -44,7 +45,9 @@ cd your-el-bot
 
 ### 安装依赖
 
-> 请检查 el-bot 是否为最新版本 ![npm](https://img.shields.io/npm/v/el-bot)，模版的依赖更新可能要略微落后。  
+![el-bot](https://img.shields.io/npm/v/el-bot?label=el-bot)
+
+> 请检查 el-bot 是否为最新版本，模版的依赖更新可能要略微落后。  
 > 安装最新版本 el-bot：`npm install el-bot@latest`
 
 ```sh
@@ -62,21 +65,19 @@ npm install
 Example:
 
 ```sh
-wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.3/mcl-1.0.3.zip
-unzip -o -d mcl mcl-1.0.3.zip
+wget https://github.com/iTXTech/mirai-console-loader/releases/download/v1.0.4/mcl-1.0.4.zip
+unzip -o -d mcl mcl-1.0.4.zip
 ```
 
 ### 启动 mirai
 
 通过 [mirai-console-loader](https://github.com/iTXTech/mirai-console-loader) 启动 mirai。（您也可以使用其他任意方式，并记得加载 mirai-api-http 插件。）
 
-> 如果 mcl 无法正常启动，您可以比对 `mcl/config.json` 版本是否正确。
-
 ```sh
 cd mcl
 ./mcl
 # 添加自动登录
-/autoLogin add 712727946 yourpassword
+/autoLogin add 114514 yourpassword
 ```
 
 ### 配置
@@ -85,7 +86,7 @@ cd mcl
 
 下载 [mirai-api-http Releases](https://github.com/project-mirai/mirai-api-http/releases) jar 包，放置于 `mcl/plugins` 文件夹。
 
-配置文件位于 `mcl/config/MiraiApiHttp/setting.yml`
+配置文件位于 `mcl/config/net.mamoe.mirai-api-http/setting.yml`
 
 最好自行修改你的 `authKey`，否则你的机器人将很可能被 [NTR](https://zh.moegirl.org/zh-hans/NTR)。
 
