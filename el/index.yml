@@ -10,7 +10,7 @@ plugins:
   #   - hitokoto
   #   - niubi
   custom:
-    - ./bot/test
+    - ./plugins/test
 
 rss:
   - name: 云游君的小站

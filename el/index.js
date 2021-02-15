@@ -6,7 +6,7 @@ module.exports = {
   qq: parseInt(process.env.BOT_QQ),
   // 你可以直接解析 mirai-api-http 的配置
   setting: utils.config.parse(
-    resolve(__dirname, "../mirai/plugins/MiraiAPIHTTP/setting.yml")
+    resolve(__dirname, "../mcl/config/net.mamoe.mirai-api-http/setting.yml")
   ),
   // setting: {
   //   enableWebsocket: false, // 须与 mirai-api-http 的配置保持一致，若 mirai 已设置为 true，则此处也应为 true
@@ -17,7 +17,7 @@ module.exports = {
     uri: process.env.BOT_DB_URI,
     analytics: true,
   },
-  config: utils.config.parse(resolve(__dirname, "./index.yml")),
+  bot: utils.config.parse(resolve(__dirname, "./index.yml")),
   // webhook
   webhook: {
     enable: true,
