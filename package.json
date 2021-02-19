@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "^0.8.0-alpha.5"
+    "el-bot": "^0.8.0-alpha.7"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
