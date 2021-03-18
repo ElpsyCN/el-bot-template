@@ -5,7 +5,7 @@ const { utils } = require("el-bot");
 module.exports = {
   qq: parseInt(process.env.BOT_QQ),
   // 你可以直接解析 mirai-api-http 的配置
-  setting: "../mcl/config/net.mamoe.mirai-api-http/setting.yml",
+  setting: "mcl/config/net.mamoe.mirai-api-http/setting.yml",
   // setting: {
   //   enableWebsocket: false, // 须与 mirai-api-http 的配置保持一致，若 mirai 已设置为 true，则此处也应为 true
   // },

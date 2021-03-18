@@ -32,12 +32,12 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "^0.8.0-alpha.7"
+    "el-bot": "^0.8.0-beta.3"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "eslint": "^7.20.0",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1"
   }
