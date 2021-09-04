@@ -1,6 +1,6 @@
 {
   "name": "el-bot-template",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "el-bot 的快速启动模版",
   "private": true,
   "main": "index.js",
@@ -32,13 +32,14 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "^0.8.0-beta.3"
+    "el-bot": "^0.9.0-beta.1"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
-    "nodemon": "^2.0.7",
-    "prettier": "^2.2.1"
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
   }
 }
