@@ -1,11 +1,6 @@
 {
-  "root": true,
-  "extends": ["prettier"],
-  "env": {
-    "node": true
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2016
+  "extends": ["@antfu/eslint-config-ts"],
+  "rules": {
+    "no-template-curly-in-string": "off"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowJs": true
+  },
+  "include": ["package.json", "**/*.ts", "src/**/*.ts", "src/plugins/**/*/package.json"],
+  "exclude": ["node_modules", "dist", "mcl"]
+}

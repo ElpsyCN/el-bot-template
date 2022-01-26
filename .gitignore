@@ -1,7 +1,7 @@
 # custom
 tmp
 nohup.out
-.vscode
+.pnpm-global
 
 # mcl
 mcl
@@ -84,3 +84,5 @@ typings/
 .cache
 
 dist
+
+pnpm-global/

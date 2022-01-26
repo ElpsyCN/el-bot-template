@@ -8,14 +8,15 @@
     "folder": "mcl"
   },
   "scripts": {
-    "bot": "nodemon --exec el bot",
-    "dev": "nodemon --exec el bot",
+    "build": "tsup && npm run copy:pkg",
+    "bot": "nodemon --require dotenv/config dist/index.js",
+    "copy:pkg": "esmo scripts/copy.ts",
+    "dev": "tsup --watch && nodemon --require dotenv/config dist/index.js",
     "mcl": "cd mcl && ./mcl",
-    "start": "el start",
-    "start:bot": "el start bot",
-    "start:mcl": "el start mcl",
-    "install:mirai": "el install mirai",
-    "lint": "eslint --fix . && prettier --write ."
+    "start": "npm run build && npm run start:bot",
+    "start:bot": "node --require dotenv/config dist/index.js",
+    "lint": "eslint \"**/*.{ts,js}\"",
+    "lint:fix": "eslint \"**/*.{ts,js}\" --fix"
   },
   "repository": {
     "type": "git",
@@ -32,14 +33,16 @@
   },
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
-    "el-bot": "^0.9.0-beta.1"
+    "chalk": "4",
+    "el-bot": "^0.9.0-beta.17"
   },
   "devDependencies": {
-    "chalk": "^4.1.2",
-    "dotenv": "^10.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
+    "@antfu/eslint-config": "^0.16.0",
+    "dotenv": "^14.3.2",
+    "eslint": "^8.7.0",
+    "esno": "^0.14.0",
     "nodemon": "^2.0.12",
-    "prettier": "^2.3.2"
+    "tsup": "^5.11.11",
+    "typescript": "^4.5.5"
   }
 }

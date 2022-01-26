@@ -51,7 +51,10 @@ cd your-el-bot
 > 安装最新版本 el-bot：`npm install el-bot@latest`
 
 ```sh
-npm install
+# 安装 pnpm
+# npm i -g pnpm
+pnpm i
+# npm install
 ```
 
 ### 安装 mirai
@@ -101,9 +104,9 @@ enableWebsocket: true
 
 #### 配置 bot
 
-```js
-// el/index.js
-module.exports = {
+```ts
+// el/index.ts
+export default {
   // 你登录的 QQ 号
   qq: 12345679,
 };
@@ -118,15 +121,23 @@ module.exports = {
 > 记得新建一个终端，并确保你的 mirai 控制台保持打开与 QQ 已经登录。
 > 检测控制台是否可以正常使用的一个方式是访问 `localhost:4859/about` 查看是否有信息返回。（如果你修改了端口号，记得替换。）
 
-```sh
-npm run start:bot
-# yarn run start:bot
+```bash
+npm run build
+# 构建 ts
+npm run bot
+# 启动 bot
 ```
 
+等价于：
+
 ```sh
-# 本质与 npm run start:bot 相同，不过配置了 nodemon 启动，所以当修改文件时可以自动重启。
-npm run bot
-# yarn bot
+npm run start
+# yarn run start
+```
+
+```bash
+# 开发，将会 watch 修改的文件
+npm run dev
 ```
 
 此时，你的 QQ 机器人就已经成功运行起来了。并将附带了一些默认的功能。
@@ -143,9 +154,9 @@ el-bot 将与已启动的 mirai 已登录的 QQ 建立连接。（如连接失�
 
 - `enable`: 是否启用
 
-```js
-// el/index.js
-module.exports = {
+```ts
+// el/index.ts
+export default {
   webhook: {
     enable: true,
     path: "/webhook",
