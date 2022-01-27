@@ -34,10 +34,10 @@
   "homepage": "https://github.com/ElpsyCN/el-bot-template#readme",
   "dependencies": {
     "chalk": "4",
-    "el-bot": "^0.9.0-beta.17"
+    "el-bot": "^0.9.0-beta.18"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.16.0",
+    "@antfu/eslint-config": "^0.16.1",
     "dotenv": "^14.3.2",
     "eslint": "^8.7.0",
     "esno": "^0.14.0",
