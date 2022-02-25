@@ -1,5 +1,5 @@
-import type { El } from 'el-bot'
-const config: El = {
+import type { ElConfig } from 'el-bot'
+const config: ElConfig = {
   // @ts-expect-error dotenv
   qq: parseInt(process.env.BOT_QQ),
   // 你可以直接解析 mirai-api-http 的配置
